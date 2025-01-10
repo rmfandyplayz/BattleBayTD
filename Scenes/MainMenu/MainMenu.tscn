@@ -1,0 +1,96 @@
+[gd_scene load_steps=9 format=3 uid="uid://81bwf1t6hbwm"]
+
+[ext_resource type="FontFile" uid="uid://cd3a0krvj73ij" path="res://Media/Fonts/SFPro/SF-Pro-Display-Regular.otf" id="1_50d0m"]
+[ext_resource type="Script" path="res://Scripts/MainMenu/MainMenu.gd" id="1_sdxve"]
+[ext_resource type="FontFile" uid="uid://cr8es400x36m" path="res://Media/Fonts/SFPro/SF-Pro-Display-RegularItalic.otf" id="2_1ytja"]
+[ext_resource type="FontFile" uid="uid://bt1r3wvjig214" path="res://Media/Fonts/SFPro/SF-Pro-Display-BoldItalic.otf" id="3_ttebp"]
+[ext_resource type="FontFile" uid="uid://bnfenwy05u2ed" path="res://Media/Fonts/SFPro/SF-Pro-Display-Bold.otf" id="4_mdvb3"]
+[ext_resource type="Texture2D" uid="uid://dqlwgavjftp3k" path="res://Media/UserInterface/MainMenu/Button_Battle.png" id="6_h0f5v"]
+[ext_resource type="Script" path="res://Scripts/MainMenu/PlayButton.gd" id="6_pb4tg"]
+[ext_resource type="Texture2D" uid="uid://dgvro20ttq6g" path="res://Media/UserInterface/MainMenu/Button_Settings.png" id="8_2n5lo"]
+
+[node name="MainMenu" type="Node2D"]
+script = ExtResource("1_sdxve")
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1920.0
+offset_bottom = 1080.0
+
+[node name="BGColor" type="ColorRect" parent="Control"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0.0228, 0.0228, 0.12, 1)
+
+[node name="GameTitle" type="RichTextLabel" parent="Control"]
+layout_mode = 1
+anchors_preset = -1
+offset_left = 56.0
+offset_top = 30.0
+offset_right = 1190.0
+offset_bottom = 515.0
+theme_override_fonts/normal_font = ExtResource("1_50d0m")
+theme_override_fonts/italics_font = ExtResource("2_1ytja")
+theme_override_fonts/bold_italics_font = ExtResource("3_ttebp")
+theme_override_fonts/bold_font = ExtResource("4_mdvb3")
+bbcode_enabled = true
+text = "[font_size=150][b]BATTLE
+BAY[/b][/font_size]
+[font gl=15][font_size=40]TOWER DEFENSE[/font_size][/font]"
+
+[node name="PlayButton" type="Button" parent="Control" node_paths=PackedStringArray("mainMenuScript")]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 38.0
+offset_top = -256.0
+offset_right = 463.0
+offset_bottom = -41.0
+icon = ExtResource("6_h0f5v")
+flat = true
+script = ExtResource("6_pb4tg")
+mainMenuScript = NodePath("../..")
+
+[node name="SettingsButton" type="Button" parent="Control"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -184.0
+offset_top = -183.0
+offset_right = -46.0
+offset_bottom = -45.0
+flat = true
+
+[node name="GearIcon" type="TextureRect" parent="Control/SettingsButton"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("8_2n5lo")
+
+[node name="GithubButton" type="Button" parent="Control"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -184.0
+offset_top = -366.0
+offset_right = -46.0
+offset_bottom = -228.0
+text = "github (100%)"
+
+[connection signal="pressed" from="Control/PlayButton" to="Control/PlayButton" method="_on_pressed"]

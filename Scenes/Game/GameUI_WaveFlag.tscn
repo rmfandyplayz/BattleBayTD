@@ -1,0 +1,25 @@
+[gd_scene load_steps=4 format=3 uid="uid://b47dxf611674l"]
+
+[ext_resource type="Script" path="res://Scripts/Game/GameUI_WaveFlag.gd" id="1_cfyoy"]
+[ext_resource type="Texture2D" uid="uid://dxgr1uhv2or2n" path="res://Media/UserInterface/Game/Icon_FlagRed.png" id="1_q35q0"]
+[ext_resource type="Texture2D" uid="uid://ct5oplwh2jf6k" path="res://Media/UserInterface/Game/Icon_FlagGreen.png" id="2_pavq1"]
+
+[node name="GameUIWaveFlag" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = -30.0
+offset_top = -30.0
+offset_right = 30.0
+offset_bottom = 30.0
+script = ExtResource("1_cfyoy")
+
+[node name="GreenFlag" type="TextureRect" parent="."]
+visible = false
+offset_right = 60.0
+offset_bottom = 60.0
+texture = ExtResource("2_pavq1")
+
+[node name="RedFlag" type="TextureRect" parent="."]
+offset_right = 60.0
+offset_bottom = 60.0
+texture = ExtResource("1_q35q0")

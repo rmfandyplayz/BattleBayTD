@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cyjjo3c8ap1hq"
-path="res://.godot/imported/Bar_CurrencyBG.png-3969983fffa4388bb4f116cd59114cbd.ctex"
+uid="uid://du3i8qln7twp5"
+path="res://.godot/imported/Bar_HPBarEnemyEmpty.png-3386be66c27036ba18e45c831ad4fbf7.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Media/UserInterface/Game/Bar_CurrencyBG.png"
-dest_files=["res://.godot/imported/Bar_CurrencyBG.png-3969983fffa4388bb4f116cd59114cbd.ctex"]
+source_file="res://Media/UserInterface/Game/Bar_HPBarEnemyEmpty.png"
+dest_files=["res://.godot/imported/Bar_HPBarEnemyEmpty.png-3386be66c27036ba18e45c831ad4fbf7.ctex"]
 
 [params]
 

@@ -12,13 +12,13 @@
 [node name="MainMenu" type="Node2D"]
 script = ExtResource("1_sdxve")
 
-[node name="Control" type="Control" parent="."]
+[node name="MainMenuUI" type="Control" parent="."]
 layout_mode = 3
 anchors_preset = 0
 offset_right = 1920.0
 offset_bottom = 1080.0
 
-[node name="BGColor" type="ColorRect" parent="Control"]
+[node name="BGColor" type="ColorRect" parent="MainMenuUI"]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -28,7 +28,7 @@ grow_vertical = 2
 mouse_filter = 2
 color = Color(0.0228, 0.0228, 0.12, 1)
 
-[node name="GameTitle" type="RichTextLabel" parent="Control"]
+[node name="GameTitle" type="RichTextLabel" parent="MainMenuUI"]
 layout_mode = 1
 anchors_preset = -1
 offset_left = 56.0
@@ -44,7 +44,7 @@ text = "[font_size=150][b]BATTLE
 BAY[/b][/font_size]
 [font gl=15][font_size=40]TOWER DEFENSE[/font_size][/font]"
 
-[node name="PlayButton" type="Button" parent="Control" node_paths=PackedStringArray("mainMenuScript")]
+[node name="PlayButton" type="Button" parent="MainMenuUI" node_paths=PackedStringArray("mainMenuScript")]
 layout_mode = 1
 anchors_preset = -1
 anchor_top = 1.0
@@ -58,7 +58,7 @@ flat = true
 script = ExtResource("6_pb4tg")
 mainMenuScript = NodePath("../..")
 
-[node name="SettingsButton" type="Button" parent="Control"]
+[node name="SettingsButton" type="Button" parent="MainMenuUI"]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 1.0
@@ -71,7 +71,7 @@ offset_right = -46.0
 offset_bottom = -45.0
 flat = true
 
-[node name="GearIcon" type="TextureRect" parent="Control/SettingsButton"]
+[node name="GearIcon" type="TextureRect" parent="MainMenuUI/SettingsButton"]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -80,7 +80,7 @@ grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("8_2n5lo")
 
-[node name="GithubButton" type="Button" parent="Control"]
+[node name="GithubButton" type="Button" parent="MainMenuUI"]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 1.0
@@ -93,4 +93,4 @@ offset_right = -46.0
 offset_bottom = -228.0
 text = "github (100%)"
 
-[connection signal="pressed" from="Control/PlayButton" to="Control/PlayButton" method="_on_pressed"]
+[connection signal="pressed" from="MainMenuUI/PlayButton" to="MainMenuUI/PlayButton" method="_on_pressed"]

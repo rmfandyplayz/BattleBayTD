@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bvkancp7567ao"
-path="res://.godot/imported/Bar_Currency.png-edca46a066f530e350b16d910565d460.ctex"
+uid="uid://baij0uj8egckh"
+path="res://.godot/imported/Bar_HPBarAllyFill.png-fa642df91e0ee12dbf82898442adf4d8.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Media/UserInterface/Game/Bar_Currency.png"
-dest_files=["res://.godot/imported/Bar_Currency.png-edca46a066f530e350b16d910565d460.ctex"]
+source_file="res://Media/UserInterface/Game/Bar_HPBarAllyFill.png"
+dest_files=["res://.godot/imported/Bar_HPBarAllyFill.png-fa642df91e0ee12dbf82898442adf4d8.ctex"]
 
 [params]
 

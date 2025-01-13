@@ -1,0 +1,67 @@
+[gd_scene load_steps=13 format=3 uid="uid://b0urmdcrx1rln"]
+
+[ext_resource type="Texture2D" uid="uid://cugs6ss50sykp" path="res://Media/Sprites/Game/Item_Background.png" id="1_1y4df"]
+[ext_resource type="Texture2D" uid="uid://dmb8cdxlaiynh" path="res://Media/Sprites/Game/Item_BorderCommon.png" id="1_6hysd"]
+[ext_resource type="Script" path="res://Scripts/AbstractScripts/Weapons/BaseItem.gd" id="2_c231q"]
+[ext_resource type="Texture2D" uid="uid://bg3uvqmsijsjb" path="res://Media/Sprites/Game/Item_BorderEpic.png" id="2_qf8ur"]
+[ext_resource type="Texture2D" uid="uid://b7r2ljlra2a0j" path="res://Media/Sprites/Game/Item_BorderLegendary.png" id="3_raxao"]
+[ext_resource type="Texture2D" uid="uid://bs1j4jcvlj86a" path="res://Media/Sprites/Game/Item_BorderRare.png" id="4_lxrap"]
+[ext_resource type="Texture2D" uid="uid://bp86rxrwb685x" path="res://Media/Sprites/Game/Item_BorderUncommon.png" id="5_2qn5l"]
+[ext_resource type="Texture2D" uid="uid://cqkgq105cr35t" path="res://Media/Sprites/Game/Item_Tier5.png" id="8_c032m"]
+[ext_resource type="Texture2D" uid="uid://bap66jtragem1" path="res://Media/Sprites/Game/Item_Tier4.png" id="9_tq3nb"]
+[ext_resource type="Texture2D" uid="uid://d3hyff1430ke1" path="res://Media/Sprites/Game/Item_Tier3.png" id="10_1m6ri"]
+[ext_resource type="Texture2D" uid="uid://dyipu31fip7ft" path="res://Media/Sprites/Game/Item_Tier2.png" id="11_nrrb3"]
+[ext_resource type="Texture2D" uid="uid://d2itq5f48j44g" path="res://Media/Sprites/Game/Item_Tier1.png" id="12_qwqx2"]
+
+[node name="AbstractWeapon" type="Sprite2D"]
+texture = ExtResource("1_1y4df")
+offset = Vector2(0, 3)
+script = ExtResource("2_c231q")
+
+[node name="ItemBorderLegendary" type="Sprite2D" parent="."]
+visible = false
+texture = ExtResource("3_raxao")
+offset = Vector2(0, 3)
+
+[node name="ItemBorderEpic" type="Sprite2D" parent="."]
+visible = false
+texture = ExtResource("2_qf8ur")
+offset = Vector2(0, 3)
+
+[node name="ItemBorderRare" type="Sprite2D" parent="."]
+visible = false
+texture = ExtResource("4_lxrap")
+offset = Vector2(0, 3)
+
+[node name="ItemBorderUncommon" type="Sprite2D" parent="."]
+visible = false
+texture = ExtResource("5_2qn5l")
+offset = Vector2(0, 3)
+
+[node name="ItemBorderCommon" type="Sprite2D" parent="."]
+texture = ExtResource("1_6hysd")
+offset = Vector2(0, 3)
+
+[node name="ItemTierV" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(0.5, -102.5)
+texture = ExtResource("8_c032m")
+
+[node name="ItemTierIV" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(0.5, -102.5)
+texture = ExtResource("9_tq3nb")
+
+[node name="ItemTierIII" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(0.5, -102.5)
+texture = ExtResource("10_1m6ri")
+
+[node name="ItemTierII" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(0.5, -102.5)
+texture = ExtResource("11_nrrb3")
+
+[node name="ItemTierI" type="Sprite2D" parent="."]
+position = Vector2(0.5, -102.5)
+texture = ExtResource("12_qwqx2")

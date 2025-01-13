@@ -1,4 +1,4 @@
-extends Node2D
+extends Sprite2D
 class_name BaseItem
 
 ## the abstract base class for all weapons. all weapons will inherit this one
@@ -15,3 +15,7 @@ enum slotType { # the type of slot this item will take up
 @export var slotPoints : int # num of slot points this item will take up in the respective slot type
 
 @export var level : int # the level of this item. determines how strong this item will be. max level 50
+
+
+func SetItemLevel(level : int):
+	pass

@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://c88m6gbph25g3"]
+[gd_scene load_steps=13 format=3 uid="uid://c88m6gbph25g3"]
 
 [ext_resource type="Script" path="res://Scripts/Game/GameUI.gd" id="1_7c7vu"]
 [ext_resource type="Texture2D" uid="uid://dw55ns05vvphx" path="res://Media/UserInterface/Game/Icon_Sugar.png" id="1_tu8nx"]
@@ -9,12 +9,15 @@
 [ext_resource type="Texture2D" uid="uid://cyjjo3c8ap1hq" path="res://Media/UserInterface/General/Bar_FilledGreen.png" id="4_sbnal"]
 [ext_resource type="FontFile" uid="uid://bnfenwy05u2ed" path="res://Media/Fonts/SFPro/SF-Pro-Display-Bold.otf" id="5_a03na"]
 [ext_resource type="Texture2D" uid="uid://dravpc5vpw1jq" path="res://Media/UserInterface/General/Button_Teal.png" id="9_nqlxf"]
+[ext_resource type="Texture2D" uid="uid://bfh58h3tpal3r" path="res://Media/UserInterface/General/Arrow_Left.png" id="10_7axyy"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_772e0"]
 font = ExtResource("5_a03na")
 font_size = 26
 outline_size = 7
 outline_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_hqj00"]
 
 [node name="GameUI" type="Control" node_paths=PackedStringArray("goldValueText", "goldBar", "sugarValueText", "sugarBar", "pearlValueText")]
 layout_mode = 3
@@ -38,7 +41,7 @@ offset_top = 28.0
 offset_right = 760.0
 offset_bottom = 74.0
 max_value = 1000.0
-value = 586.0
+value = 696.0
 nine_patch_stretch = true
 stretch_margin_left = 10
 stretch_margin_top = 10
@@ -178,7 +181,28 @@ offset_left = 15.0
 offset_top = 18.0
 offset_right = 85.0
 offset_bottom = 88.0
+theme_override_styles/focus = SubResource("StyleBoxEmpty_hqj00")
 icon = ExtResource("9_nqlxf")
 flat = true
 icon_alignment = 1
 expand_icon = true
+
+[node name="Arrow" type="TextureRect" parent="PauseButton"]
+z_index = 1
+z_as_relative = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -23.0
+offset_top = -23.0
+offset_right = 23.0
+offset_bottom = 23.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("10_7axyy")
+expand_mode = 1
+metadata/_edit_lock_ = true

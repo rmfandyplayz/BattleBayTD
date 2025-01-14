@@ -14,54 +14,75 @@
 [ext_resource type="Texture2D" uid="uid://d2itq5f48j44g" path="res://Media/Sprites/Game/Item_Tier1.png" id="12_qwqx2"]
 
 [node name="AbstractWeapon" type="Sprite2D"]
+z_as_relative = false
 texture = ExtResource("1_1y4df")
 offset = Vector2(0, 3)
 script = ExtResource("2_c231q")
 
 [node name="ItemBorderLegendary" type="Sprite2D" parent="."]
 visible = false
+z_index = 3
+z_as_relative = false
 texture = ExtResource("3_raxao")
 offset = Vector2(0, 3)
 
 [node name="ItemBorderEpic" type="Sprite2D" parent="."]
 visible = false
+z_index = 3
+z_as_relative = false
 texture = ExtResource("2_qf8ur")
 offset = Vector2(0, 3)
 
 [node name="ItemBorderRare" type="Sprite2D" parent="."]
 visible = false
+z_index = 3
+z_as_relative = false
 texture = ExtResource("4_lxrap")
 offset = Vector2(0, 3)
 
 [node name="ItemBorderUncommon" type="Sprite2D" parent="."]
 visible = false
+z_index = 3
+z_as_relative = false
 texture = ExtResource("5_2qn5l")
 offset = Vector2(0, 3)
 
 [node name="ItemBorderCommon" type="Sprite2D" parent="."]
+z_index = 3
+z_as_relative = false
 texture = ExtResource("1_6hysd")
 offset = Vector2(0, 3)
 
 [node name="ItemTierV" type="Sprite2D" parent="."]
 visible = false
+z_index = 4
+z_as_relative = false
 position = Vector2(0.5, -102.5)
 texture = ExtResource("8_c032m")
 
 [node name="ItemTierIV" type="Sprite2D" parent="."]
 visible = false
+z_index = 4
+z_as_relative = false
 position = Vector2(0.5, -102.5)
 texture = ExtResource("9_tq3nb")
 
 [node name="ItemTierIII" type="Sprite2D" parent="."]
 visible = false
+z_index = 4
+z_as_relative = false
 position = Vector2(0.5, -102.5)
 texture = ExtResource("10_1m6ri")
 
 [node name="ItemTierII" type="Sprite2D" parent="."]
 visible = false
+z_index = 4
+z_as_relative = false
 position = Vector2(0.5, -102.5)
 texture = ExtResource("11_nrrb3")
 
 [node name="ItemTierI" type="Sprite2D" parent="."]
+z_index = 4
+z_as_relative = false
 position = Vector2(0.5, -102.5)
 texture = ExtResource("12_qwqx2")

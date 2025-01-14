@@ -11,6 +11,8 @@ class_name BaseCannonWeapon
 @export var critChance : float
 @export var fireBonus : float # applies extra damage to burning enemies
 
+func _ready() -> void:
+	SetItemSlotType(slotType)
 
 func FireWeapon(target : Node2D):
 	pass

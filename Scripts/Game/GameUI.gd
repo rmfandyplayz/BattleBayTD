@@ -31,4 +31,3 @@ func UpdatePearls(value : int, isAddition : bool = true):
 		numPearls = value
 	
 	pearlValueText.text = str(numPearls)
-	

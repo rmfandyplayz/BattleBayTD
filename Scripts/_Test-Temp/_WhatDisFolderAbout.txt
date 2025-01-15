@@ -1,2 +1,0 @@
-this folder contains scripts that are used purely for testing purposes
-that, or temporary scripts that are meant to be deleted later

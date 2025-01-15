@@ -1,0 +1,2 @@
+this folder contains stuff that are used purely for testing purposes
+that, or temporary things that are meant to be deleted later

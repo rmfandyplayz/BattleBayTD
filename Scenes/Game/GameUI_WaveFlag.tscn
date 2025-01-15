@@ -15,11 +15,13 @@ script = ExtResource("1_cfyoy")
 
 [node name="GreenFlag" type="TextureRect" parent="."]
 visible = false
+layout_mode = 0
 offset_right = 60.0
 offset_bottom = 60.0
 texture = ExtResource("2_pavq1")
 
 [node name="RedFlag" type="TextureRect" parent="."]
+layout_mode = 0
 offset_right = 60.0
 offset_bottom = 60.0
 texture = ExtResource("1_q35q0")

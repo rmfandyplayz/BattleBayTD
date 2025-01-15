@@ -1,8 +1,7 @@
-[gd_scene load_steps=13 format=3 uid="uid://b0urmdcrx1rln"]
+[gd_scene load_steps=12 format=3 uid="uid://b0urmdcrx1rln"]
 
 [ext_resource type="Texture2D" uid="uid://cugs6ss50sykp" path="res://Media/Sprites/Game/Item_Background.png" id="1_1y4df"]
 [ext_resource type="Texture2D" uid="uid://dmb8cdxlaiynh" path="res://Media/Sprites/Game/Item_BorderCommon.png" id="1_6hysd"]
-[ext_resource type="Script" path="res://Scripts/AbstractScripts/Weapons/BaseItem.gd" id="2_c231q"]
 [ext_resource type="Texture2D" uid="uid://bg3uvqmsijsjb" path="res://Media/Sprites/Game/Item_BorderEpic.png" id="2_qf8ur"]
 [ext_resource type="Texture2D" uid="uid://b7r2ljlra2a0j" path="res://Media/Sprites/Game/Item_BorderLegendary.png" id="3_raxao"]
 [ext_resource type="Texture2D" uid="uid://bs1j4jcvlj86a" path="res://Media/Sprites/Game/Item_BorderRare.png" id="4_lxrap"]
@@ -13,11 +12,8 @@
 [ext_resource type="Texture2D" uid="uid://dyipu31fip7ft" path="res://Media/Sprites/Game/Item_Tier2.png" id="11_nrrb3"]
 [ext_resource type="Texture2D" uid="uid://d2itq5f48j44g" path="res://Media/Sprites/Game/Item_Tier1.png" id="12_qwqx2"]
 
-[node name="AbstractWeapon" type="Sprite2D"]
+[node name="AbstractWeapon" type="Node2D"]
 z_as_relative = false
-texture = ExtResource("1_1y4df")
-offset = Vector2(0, 3)
-script = ExtResource("2_c231q")
 
 [node name="ItemBorderLegendary" type="Sprite2D" parent="."]
 visible = false
@@ -59,6 +55,7 @@ z_index = 4
 z_as_relative = false
 position = Vector2(0.5, -102.5)
 texture = ExtResource("8_c032m")
+metadata/_edit_lock_ = true
 
 [node name="ItemTierIV" type="Sprite2D" parent="."]
 visible = false
@@ -66,6 +63,7 @@ z_index = 4
 z_as_relative = false
 position = Vector2(0.5, -102.5)
 texture = ExtResource("9_tq3nb")
+metadata/_edit_lock_ = true
 
 [node name="ItemTierIII" type="Sprite2D" parent="."]
 visible = false
@@ -73,6 +71,7 @@ z_index = 4
 z_as_relative = false
 position = Vector2(0.5, -102.5)
 texture = ExtResource("10_1m6ri")
+metadata/_edit_lock_ = true
 
 [node name="ItemTierII" type="Sprite2D" parent="."]
 visible = false
@@ -80,9 +79,14 @@ z_index = 4
 z_as_relative = false
 position = Vector2(0.5, -102.5)
 texture = ExtResource("11_nrrb3")
+metadata/_edit_lock_ = true
 
 [node name="ItemTierI" type="Sprite2D" parent="."]
 z_index = 4
 z_as_relative = false
 position = Vector2(0.5, -102.5)
 texture = ExtResource("12_qwqx2")
+metadata/_edit_lock_ = true
+
+[node name="ItemBackground" type="Sprite2D" parent="."]
+texture = ExtResource("1_1y4df")

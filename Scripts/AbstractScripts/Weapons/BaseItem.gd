@@ -1,9 +1,11 @@
 extends Node2D
 class_name BaseItem
 
+## written by Andy (@rmfandyplayz)
 ## the abstract base class for all weapons. all weapons will inherit this one
 ##
 ## contains things that every weapon has in common
+## fyi: don't use engine-called functions cuz they will be called here... unless that's what u intend lol
 
 enum slotTypes { # the type of slot this item will take up
 	RED = 1,
@@ -16,23 +18,40 @@ enum slotTypes { # the type of slot this item will take up
 @export var slotPoints : int # num of slot points this item will take up in the respective slot type
 @export var itemLevel : int = 1 # the level of this item. determines how strong this item will be. max level 25
 
+var itemBackground : Sprite2D
+var borderCommon : Sprite2D
+var borderUncommon : Sprite2D
+var borderRare : Sprite2D
+var borderEpic : Sprite2D
+var borderLegendary : Sprite2D
+var itemTierI : Sprite2D
+var itemTierII : Sprite2D
+var itemTierIII : Sprite2D
+var itemTierIV : Sprite2D
+var itemTierV : Sprite2D
+var setInvisibleList : Array[Sprite2D] # elements to set invisible before re-setting the item level
 
 
-@onready var borderCommon : Sprite2D = $ItemBorderCommon
-@onready var borderUncommon : Sprite2D = $ItemBorderUncommon
-@onready var borderRare : Sprite2D = $ItemBorderRare
-@onready var borderEpic : Sprite2D = $ItemBorderEpic
-@onready var borderLegendary : Sprite2D = $ItemBorderLegendary
-@onready var itemTierI : Sprite2D = $ItemTierI
-@onready var itemTierII : Sprite2D = $ItemTierII
-@onready var itemTierIII : Sprite2D = $ItemTierIII
-@onready var itemTierIV : Sprite2D = $ItemTierIV
-@onready var itemTierV : Sprite2D = $ItemTierV
-@onready var setInvisibleList : Array[Sprite2D] = [ # elements to set invisible before re-setting the item level
-	borderCommon, 
-	borderUncommon, 
-	borderRare, 
-	borderEpic, 
+
+## initialize all of the sprites and whatnot
+func InitializeElements(abstractWeaponPath : Node2D):
+	itemBackground = get_node(abstractWeaponPath.name + "/ItemBackground")
+	borderCommon = get_node(abstractWeaponPath.name + "/ItemBorderCommon")
+	borderUncommon = get_node(abstractWeaponPath.name + "/ItemBorderUncommon")
+	borderRare = get_node(abstractWeaponPath.name + "/ItemBorderRare")
+	borderEpic = get_node(abstractWeaponPath.name + "/ItemBorderEpic")
+	borderLegendary = get_node(abstractWeaponPath.name + "/ItemBorderLegendary")
+	itemTierI = get_node(abstractWeaponPath.name + "/ItemTierI")
+	itemTierII = get_node(abstractWeaponPath.name + "/ItemTierII")
+	itemTierIII = get_node(abstractWeaponPath.name + "/ItemTierIII")
+	itemTierIV = get_node(abstractWeaponPath.name + "/ItemTierIV")
+	itemTierV = get_node(abstractWeaponPath.name + "/ItemTierV")
+	
+	setInvisibleList = [
+	borderCommon,
+	borderUncommon,
+	borderRare,
+	borderEpic,
 	borderLegendary,
 	itemTierI,
 	itemTierII,
@@ -40,10 +59,14 @@ enum slotTypes { # the type of slot this item will take up
 	itemTierIV,
 	itemTierV
 	]
+
+
+
+## sets the level of the item (both visually and in-code)
 func SetItemLevel(newLevel : int):
 	for element : Sprite2D in setInvisibleList:
 		element.visible = false
-	
+
 	match newLevel % 5:
 		0: # tier V
 			itemTierV.visible = true
@@ -55,7 +78,7 @@ func SetItemLevel(newLevel : int):
 			itemTierIII.visible = true
 		4: # tier IV
 			itemTierIV.visible = true
-		_: # if code for some reason decided to go out of range
+		_: # base case: if code for some reason decided to go out of range
 			itemTierI.visible = true
 	
 	if newLevel >= 1 and newLevel <= 5:
@@ -68,7 +91,7 @@ func SetItemLevel(newLevel : int):
 		borderEpic.visible = true
 	elif newLevel >= 21 and newLevel <= 25:
 		borderLegendary.visible = true
-	else: # if any of the code for some reason decided to go out of range
+	else: # base case: if any of the code for some reason decided to go out of range
 		borderCommon.visible = true
 	
 	itemLevel = newLevel
@@ -78,12 +101,12 @@ func SetItemLevel(newLevel : int):
 #sets the slot type that the item will be
 func SetItemSlotType(newSlotType : slotTypes):
 	if newSlotType == slotTypes.RED:
-		self_modulate = Color.RED
+		itemBackground.self_modulate = Color.RED
 	elif newSlotType == slotTypes.BLUE:
-		self_modulate = Color.DODGER_BLUE
+		itemBackground.self_modulate = Color.DODGER_BLUE
 	elif newSlotType == slotTypes.YELLOW:
-		self_modulate = Color.YELLOW
+		itemBackground.self_modulate = Color.YELLOW
 	elif newSlotType == slotTypes.GREEN:
-		self_modulate = Color.LIME_GREEN
+		itemBackground.self_modulate = Color.LIME_GREEN
 	
 	slotType = newSlotType

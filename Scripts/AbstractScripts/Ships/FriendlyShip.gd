@@ -19,3 +19,9 @@ enum targetPriority {
 
 func _ready() -> void:
 	team = 1
+	
+# uses whatever item that is equipped to the boat
+func UseItem(targetPos : Vector2):
+	# plan: access the item that should be part of the child and use it
+	# (probably through the FireWeapon() function)
+	pass

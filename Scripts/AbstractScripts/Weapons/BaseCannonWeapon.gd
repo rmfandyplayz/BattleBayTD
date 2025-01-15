@@ -15,3 +15,7 @@ func _ready() -> void:
 	InitializeElements($AbstractWeapon)
 	SetItemSlotType(slotType)
 	SetItemLevel(itemLevel)
+	
+	
+func FireWeapon(targetPos : Vector2):
+	pass

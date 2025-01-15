@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://0i6pt7t41rqe"]
+[gd_scene load_steps=4 format=3 uid="uid://0i6pt7t41rqe"]
 
 [ext_resource type="PackedScene" uid="uid://c88m6gbph25g3" path="res://Scenes/Game/GameUI.tscn" id="1_d7qo8"]
 [ext_resource type="Script" path="res://Scripts/Game/Game.gd" id="1_hqxll"]
+[ext_resource type="PackedScene" uid="uid://43cvtyusp58a" path="res://Scenes/Game/Weapons/Cannon_StandardCannon.tscn" id="3_hcg83"]
 
 [node name="Game" type="Node2D"]
 script = ExtResource("1_hqxll")
@@ -9,3 +10,6 @@ script = ExtResource("1_hqxll")
 [node name="GameUI" parent="." instance=ExtResource("1_d7qo8")]
 offset_right = 1920.0
 offset_bottom = 1080.0
+
+[node name="Cannon_StandardCannon" parent="." instance=ExtResource("3_hcg83")]
+position = Vector2(584, 604)

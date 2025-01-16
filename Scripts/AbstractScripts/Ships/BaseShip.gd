@@ -18,13 +18,10 @@ class_name BaseShip
 @export var greenSlotPoints : int
 
 # the items the ship has equipped
-@export var redItems : Array[BaseItem]
-@export var blueItems : Array[BaseItem]
-@export var yellowItems : Array[BaseItem]
-@export var greenItems : Array[BaseItem]
+@export var equippedItems : Array[BaseItem]
 
 # what ship is this?
-enum shipType {
+enum ShipTypes {
 	SHOOTER = 1,
 	DEFENDER = 2,
 	SPEEDER = 3,

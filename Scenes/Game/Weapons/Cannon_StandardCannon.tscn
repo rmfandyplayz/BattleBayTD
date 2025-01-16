@@ -9,7 +9,6 @@ script = ExtResource("1_h7eg8")
 slotType = 1
 slotPoints = 1
 itemLevel = 16
-metadata/_edit_lock_ = true
 
 [node name="AbstractWeapon" parent="." instance=ExtResource("2_7a6wx")]
 

@@ -9,7 +9,7 @@ class_name FriendlyShip
 var shipCoords : Vector2 # defines the coordinates of the ship. x is the row, y is the column
 
 # should all be pretty self explanatory; only applies to the lane the ship is in
-enum targetPriority {
+enum TargetPriorities {
 	CLOSEST_FIRST = 1,
 	FARTHEST_FIRST = 2,
 	LOWEST_HEALTH = 3,
@@ -19,8 +19,14 @@ enum targetPriority {
 
 func _ready() -> void:
 	team = 1
-	
-# uses whatever item that is equipped to the boat
+
+
+## selects the ship to potentially use the item. this function should ideally call "UseItem()"
+func SelectForFire():
+	if(Game.GetShipSelected() == false):
+		pass
+
+## uses whatever item that is equipped to the boat
 func UseItem(targetPos : Vector2):
 	# plan: access the item that should be part of the child and use it
 	# (probably through the FireWeapon() function)

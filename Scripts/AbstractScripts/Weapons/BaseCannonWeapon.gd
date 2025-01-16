@@ -12,7 +12,7 @@ class_name BaseCannonWeapon
 @export var fireBonus : float # applies extra damage to burning enemies
 
 func _ready() -> void:
-	InitializeElements($AbstractWeapon)
+	InitializeItemElements($AbstractWeapon)
 	SetItemSlotType(slotType)
 	SetItemLevel(itemLevel)
 	

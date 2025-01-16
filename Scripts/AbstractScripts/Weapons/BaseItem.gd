@@ -7,14 +7,14 @@ class_name BaseItem
 ## contains things that every weapon has in common
 ## fyi: don't use engine-called functions cuz they will be called here... unless that's what u intend lol
 
-enum slotTypes { # the type of slot this item will take up
+enum SlotTypes { # the type of slot this item will take up
 	RED = 1,
 	BLUE = 2,
 	YELLOW = 3,
 	GREEN = 4
 }
 
-@export var slotType : slotTypes
+@export var slotType : SlotTypes
 @export var slotPoints : int # num of slot points this item will take up in the respective slot type
 @export var itemLevel : int = 1 # the level of this item. determines how strong this item will be. max level 25
 
@@ -34,7 +34,7 @@ var setInvisibleList : Array[Sprite2D] # elements to set invisible before re-set
 
 
 ## initialize all of the sprites and whatnot
-func InitializeElements(abstractWeaponPath : Node2D):
+func InitializeItemElements(abstractWeaponPath : Node2D):
 	itemBackground = get_node(abstractWeaponPath.name + "/ItemBackground")
 	borderCommon = get_node(abstractWeaponPath.name + "/ItemBorderCommon")
 	borderUncommon = get_node(abstractWeaponPath.name + "/ItemBorderUncommon")
@@ -99,14 +99,14 @@ func SetItemLevel(newLevel : int):
 
 
 #sets the slot type that the item will be
-func SetItemSlotType(newSlotType : slotTypes):
-	if newSlotType == slotTypes.RED:
+func SetItemSlotType(newSlotType : SlotTypes):
+	if newSlotType == SlotTypes.RED:
 		itemBackground.self_modulate = Color.RED
-	elif newSlotType == slotTypes.BLUE:
+	elif newSlotType == SlotTypes.BLUE:
 		itemBackground.self_modulate = Color.DODGER_BLUE
-	elif newSlotType == slotTypes.YELLOW:
+	elif newSlotType == SlotTypes.YELLOW:
 		itemBackground.self_modulate = Color.YELLOW
-	elif newSlotType == slotTypes.GREEN:
+	elif newSlotType == SlotTypes.GREEN:
 		itemBackground.self_modulate = Color.LIME_GREEN
 	
 	slotType = newSlotType

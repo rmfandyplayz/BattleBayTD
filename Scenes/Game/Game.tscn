@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://0i6pt7t41rqe"]
+[gd_scene load_steps=6 format=3 uid="uid://0i6pt7t41rqe"]
 
-[ext_resource type="PackedScene" uid="uid://c88m6gbph25g3" path="res://Scenes/Game/GameUI.tscn" id="1_d7qo8"]
+[ext_resource type="PackedScene" uid="uid://c88m6gbph25g3" path="res://Scenes/Game/UI/GameUI.tscn" id="1_d7qo8"]
 [ext_resource type="Script" path="res://Scripts/Game/Game.gd" id="1_hqxll"]
 [ext_resource type="PackedScene" uid="uid://43cvtyusp58a" path="res://Scenes/Game/Weapons/Cannon_StandardCannon.tscn" id="3_hcg83"]
 [ext_resource type="PackedScene" uid="uid://b46b22hmdybm5" path="res://Scenes/Game/Ships/Friendly/Ship_Shooter.tscn" id="3_qkf1q"]
+[ext_resource type="Script" path="res://Scripts/AbstractScripts/Ships/FriendlyShip.gd" id="4_pnme1"]
 
 [node name="Game" type="Node2D"]
 script = ExtResource("1_hqxll")
@@ -13,10 +14,15 @@ offset_right = 1920.0
 offset_bottom = 1080.0
 metadata/_edit_lock_ = true
 
-[node name="Shooter" parent="." instance=ExtResource("3_qkf1q")]
-position = Vector2(273, 732)
+[node name="Shooter" parent="." node_paths=PackedStringArray("equippedItems") instance=ExtResource("3_qkf1q")]
+position = Vector2(159, 925)
+scale = Vector2(0.576577, 0.576577)
+script = ExtResource("4_pnme1")
+redSlotPoints = 2
+blueSlotPoints = 1
+equippedItems = [NodePath("Cannon_StandardCannon")]
 
 [node name="Cannon_StandardCannon" parent="Shooter" instance=ExtResource("3_hcg83")]
-position = Vector2(-72, 55)
-scale = Vector2(0.292075, 0.292075)
+position = Vector2(60.7031, 60.7032)
+scale = Vector2(0.35, 0.35)
 itemLevel = 19

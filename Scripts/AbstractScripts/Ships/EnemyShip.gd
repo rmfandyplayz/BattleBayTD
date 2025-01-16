@@ -6,9 +6,14 @@ class_name EnemyShip
 ##
 ## contains everything that enemy ships have in common, i.e. speed
 
-var speed : float
+@export var speed : float
 var lane : int # which lane is the enemy in? TODO: planned feature: set to -1 to allow free-moving ships.
 
+enum AIType {
+	CLOSE_RANGED,
+	MID_RANGED,
+	FAR_RANGED
+}
 
 func _ready() -> void:
 	team = 2

@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://81bwf1t6hbwm"]
+[gd_scene load_steps=10 format=3 uid="uid://81bwf1t6hbwm"]
 
 [ext_resource type="FontFile" uid="uid://cd3a0krvj73ij" path="res://Media/Fonts/SFPro/SF-Pro-Display-Regular.otf" id="1_50d0m"]
 [ext_resource type="Script" path="res://Scripts/MainMenu/MainMenu.gd" id="1_sdxve"]
@@ -8,6 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://dqlwgavjftp3k" path="res://Media/UserInterface/MainMenu/Button_Battle.png" id="6_h0f5v"]
 [ext_resource type="Script" path="res://Scripts/MainMenu/PlayButton.gd" id="6_pb4tg"]
 [ext_resource type="Texture2D" uid="uid://dgvro20ttq6g" path="res://Media/UserInterface/MainMenu/Button_Settings.png" id="8_2n5lo"]
+[ext_resource type="PackedScene" uid="uid://dn64m8e04tnoy" path="res://Scenes/Abstract/Game/AbstractFriendlyShip.tscn" id="9_cy1fv"]
 
 [node name="MainMenu" type="Node2D"]
 script = ExtResource("1_sdxve")
@@ -92,5 +93,7 @@ offset_top = -366.0
 offset_right = -46.0
 offset_bottom = -228.0
 text = "github (100%)"
+
+[node name="AbstractFriendlyShip" parent="." instance=ExtResource("9_cy1fv")]
 
 [connection signal="pressed" from="MainMenuUI/PlayButton" to="MainMenuUI/PlayButton" method="_on_pressed"]

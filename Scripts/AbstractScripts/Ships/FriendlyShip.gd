@@ -19,7 +19,14 @@ enum TargetPriorities {
 
 func _ready() -> void:
 	team = 1
+	_functions_test()
 
+func _functions_test() -> void: # fires a function in a loop so we know it works
+	while true :
+		var mousePos : Vector2 = get_global_mouse_position()
+		print(mousePos)
+		UseItem(mousePos)
+		await get_tree().create_timer(1).timeout
 
 ## selects the ship to potentially use the item. this function should ideally call "UseItem()"
 func SelectForFire():

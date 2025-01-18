@@ -16,6 +16,7 @@ func _ready() -> void:
 	SetItemSlotType(slotType)
 	SetItemLevel(itemLevel)
 	
-	
+
+
 func FireWeapon(targetPos : Vector2):
 	pass

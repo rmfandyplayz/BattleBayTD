@@ -95,5 +95,6 @@ offset_bottom = -228.0
 text = "github (100%)"
 
 [node name="AbstractFriendlyShip" parent="." instance=ExtResource("9_cy1fv")]
+position = Vector2(534, 517)
 
 [connection signal="pressed" from="MainMenuUI/PlayButton" to="MainMenuUI/PlayButton" method="_on_pressed"]

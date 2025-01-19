@@ -1,4 +1,4 @@
 # halo
-this is my second project for game dev class. it's based on the mobile game `Battle Bay`, which i enjoy a lot
+this game fundamentally works like `Plants vs. Zombies`, but looks like and has some mechanics from an obscure mobile game called `Battle Bay`
 
 it's a work-in-progress for now

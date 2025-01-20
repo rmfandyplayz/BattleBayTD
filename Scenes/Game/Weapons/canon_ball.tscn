@@ -1,0 +1,8 @@
+[gd_scene load_steps=3 format=3 uid="uid://b0dshgrehq1u6"]
+
+[ext_resource type="Texture2D" uid="uid://dygltg517dr15" path="res://Media/Sprites/Game/Weapon_SwiftTorp.png" id="1_e2ew7"]
+[ext_resource type="Script" path="res://Scripts/Game/canon_ball.gd" id="1_wcfvj"]
+
+[node name="Canon ball" type="Sprite2D"]
+texture = ExtResource("1_e2ew7")
+script = ExtResource("1_wcfvj")

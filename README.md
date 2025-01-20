@@ -4,5 +4,5 @@ this game fundamentally works like `Plants vs. Zombies`, but looks like and has 
 it's a work-in-progress for now
 
 authors:
-@rmfandyplayz - lead, programmer
+@rmfandyplayz - lead, programmer\
 @Jeremylinyh - programmer

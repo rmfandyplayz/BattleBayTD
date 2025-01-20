@@ -8,7 +8,7 @@ class_name FriendlyShip
 
 var shipCoords : Vector2 # defines the coordinates of the ship. x is the row, y is the column
 
-@export var canon_ball : PackedScene
+@export var cannonBall : PackedScene
 
 # should all be pretty self explanatory; only applies to the lane the ship is in
 enum TargetPriorities {
@@ -39,7 +39,7 @@ func SelectForFire():
 func UseItem(targetPos : Vector2):
 	# plan: access the item that should be part of the child and use it
 	# (probably through the FireWeapon() function)
-	var projectile : Sprite2D = canon_ball.instantiate()
+	var projectile : Sprite2D = cannonBall.instantiate()
 	get_tree().root.add_child.call_deferred(projectile)
 	projectile.launched_pos = global_position
 	projectile.target_pos = targetPos

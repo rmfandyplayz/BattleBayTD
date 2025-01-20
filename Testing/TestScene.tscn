@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3 uid="uid://d1behje426aq2"]
+
+[ext_resource type="FontFile" uid="uid://cd3a0krvj73ij" path="res://Media/Fonts/SFPro/SF-Pro-Display-Regular.otf" id="1_veacl"]
+[ext_resource type="PackedScene" uid="uid://dn64m8e04tnoy" path="res://Scenes/Abstract/Game/AbstractFriendlyShip.tscn" id="2_qbgxc"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_1rk1x"]
+font = ExtResource("1_veacl")
+font_size = 60
+
+[node name="TestScene" type="Node2D"]
+
+[node name="TestLabel" type="Label" parent="."]
+offset_left = 21.0
+offset_top = -136.0
+offset_right = 1875.0
+offset_bottom = -63.0
+text = "test all kinda crap here and make sure they dont get into production scenes"
+label_settings = SubResource("LabelSettings_1rk1x")
+metadata/_edit_lock_ = true
+
+[node name="AbstractFriendlyShip" parent="." instance=ExtResource("2_qbgxc")]
+position = Vector2(534, 517)

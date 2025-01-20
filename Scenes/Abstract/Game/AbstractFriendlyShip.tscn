@@ -1,9 +1,8 @@
-[gd_scene load_steps=7 format=3 uid="uid://dn64m8e04tnoy"]
+[gd_scene load_steps=6 format=3 uid="uid://dn64m8e04tnoy"]
 
 [ext_resource type="Texture2D" uid="uid://5mxyn5y7si1j" path="res://Media/UserInterface/Game/Bar_HPBarAllyEmpty.png" id="1_gpe07"]
 [ext_resource type="Script" path="res://Scripts/AbstractScripts/Ships/FriendlyShip.gd" id="1_kmym4"]
 [ext_resource type="Texture2D" uid="uid://baij0uj8egckh" path="res://Media/UserInterface/Game/Bar_HPBarAllyFill.png" id="2_ccybw"]
-[ext_resource type="PackedScene" uid="uid://b0dshgrehq1u6" path="res://Scenes/Game/Weapons/canon_ball.tscn" id="2_k8hpl"]
 [ext_resource type="FontFile" uid="uid://bnfenwy05u2ed" path="res://Media/Fonts/SFPro/SF-Pro-Display-Bold.otf" id="4_jauqx"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_24fr3"]
@@ -14,7 +13,6 @@ outline_color = Color(0, 0, 0, 1)
 
 [node name="AbstractFriendlyShip" type="Node2D"]
 script = ExtResource("1_kmym4")
-canon_ball = ExtResource("2_k8hpl")
 
 [node name="HealthBar" type="TextureProgressBar" parent="."]
 z_as_relative = false

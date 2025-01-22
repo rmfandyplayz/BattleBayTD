@@ -29,8 +29,6 @@ func UpdateCurrency(
 	else:
 		targetValue = newValue
 	
-	print("before target val", targetValue)
-	
 	# apply the resource cap if maxValue isn't -1
 	if(maxValue != -1):
 		targetValue = clamp(targetValue, 0, maxValue)
@@ -38,9 +36,6 @@ func UpdateCurrency(
 			valueTextLabel.self_modulate = Color.RED
 		else:
 			valueTextLabel.self_modulate = Color.WHITE
-			
-
-	print("final target val", targetValue)
 
 	# smoothly update the resource bar thingy (if one exists)
 	if(bar != null):
@@ -53,15 +48,16 @@ func UpdateCurrency(
 	
 	# update the text 
 	create_tween().set_trans(Tween.TRANS_QUART).set_ease(Tween.EASE_OUT).tween_method(
-		_on_text_tween_step.bind(targetValue, valueTextLabel), 
+		Helper_OnTextTweenStep.bind(targetValue, valueTextLabel), 
 		currentValue, 
 		targetValue, 
 		textTweenTransitionTime
 	)
 	
 	return targetValue
-	
-func _on_text_tween_step(startValue : int, endValue : int, valueTextLabel : Label):
+
+# helper function for UpdateCurrency() function.
+func Helper_OnTextTweenStep(startValue : int, endValue : int, valueTextLabel : Label):
 	var currentValue = lerp(startValue, endValue, textTweenTransitionTime)
 	valueTextLabel.text = Helper_FormatNumber(int(currentValue))
 

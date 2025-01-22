@@ -1,4 +1,5 @@
 extends BaseBullet
+class_name Cannon_ball
 
 ## Cannon bullet. Intended to be attached to cannonballs
 ##
@@ -30,6 +31,7 @@ func _Bezier_spline_blackbox(delta_time : float, start_pos : Vector2, goal_pos :
 func _ready() -> void:
 	var difference : Vector2 = (launched_pos-target_pos)
 	total_distance = difference.length()
+	global_position = launched_pos
 	control_pos = (launched_pos+target_pos)/2 + total_distance * Vector2.UP
 
 func _explode() -> void:

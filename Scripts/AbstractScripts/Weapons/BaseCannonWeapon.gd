@@ -10,6 +10,7 @@ class_name BaseCannonWeapon
 @export var projectileSpeed : float
 @export var critChance : float
 @export var fireBonus : float # applies extra damage to burning enemies
+@export var cannonBall : PackedScene
 
 func _ready() -> void:
 	InitializeItemElements($AbstractWeapon)

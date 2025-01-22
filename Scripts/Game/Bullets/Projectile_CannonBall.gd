@@ -39,5 +39,6 @@ func _process(delta: float) -> void:
 	elapsed_time += delta#/(total_distance)
 	global_position = _Bezier_spline_blackbox(elapsed_time,launched_pos,target_pos,control_pos)
 	if elapsed_time >= 1.0 :
+		self.set_process(false)
 		_explode()
 		self.queue_free()

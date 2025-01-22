@@ -1,5 +1,11 @@
 extends BaseBullet
 
+## Cannon bullet. Intended to be attached to cannonballs
+##
+## When instantiated, will move to target pos while curving upward
+## Mimics how projectiles in real life works
+## Travels in constant time regardless of distance (lol)
+
 var elapsed_time : float = 0
 var total_distance : float
 var control_pos : Vector2
@@ -7,8 +13,10 @@ var control_pos : Vector2
 var launched_pos : Vector2
 var target_pos : Vector2
 
-# returns the position based on time
-func _calculate_offset_position_on_curve(delta_time : float, start_pos : Vector2, goal_pos : Vector2,control_pos : Vector2) -> Vector2:
+# returns the position on a bezier curve based on time (https://en.wikipedia.org/wiki/B%C3%A9zier_curve)
+# An implementation of the bezier curve basically pasted from desmos (https://www.desmos.com/calculator/scz7zhonfw)
+# Just think of it as a blackbox. 3 position and time goes in, position on curve gets out
+func _Bezier_spline_blackbox(delta_time : float, start_pos : Vector2, goal_pos : Vector2,control_pos : Vector2) -> Vector2:
 	var p : Vector2 = start_pos
 	var q : Vector2 = control_pos
 	var s : Vector2 = goal_pos
@@ -29,7 +37,7 @@ func _explode() -> void:
 
 func _process(delta: float) -> void:
 	elapsed_time += delta#/(total_distance)
-	global_position = _calculate_offset_position_on_curve(elapsed_time,launched_pos,target_pos,control_pos)
+	global_position = _Bezier_spline_blackbox(elapsed_time,launched_pos,target_pos,control_pos)
 	if elapsed_time >= 1.0 :
 		_explode()
 		self.queue_free()

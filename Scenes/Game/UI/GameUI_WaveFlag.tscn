@@ -30,6 +30,3 @@ offset_right = 60.0
 offset_bottom = 60.0
 pivot_offset = Vector2(30, 60)
 texture = ExtResource("3_x7b4o")
-
-[node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2(30, 32)

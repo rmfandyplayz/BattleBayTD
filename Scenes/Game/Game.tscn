@@ -12,7 +12,6 @@ script = ExtResource("1_hqxll")
 [node name="GameUI" parent="." instance=ExtResource("1_d7qo8")]
 offset_right = 1920.0
 offset_bottom = 1080.0
-metadata/_edit_lock_ = true
 
 [node name="Shooter" parent="." node_paths=PackedStringArray("equippedItems") instance=ExtResource("3_qkf1q")]
 position = Vector2(159, 925)

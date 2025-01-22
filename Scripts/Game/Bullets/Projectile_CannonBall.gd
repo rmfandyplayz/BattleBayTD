@@ -1,4 +1,4 @@
-extends Sprite2D
+extends BaseBullet
 
 var elapsed_time : float = 0
 var total_distance : float

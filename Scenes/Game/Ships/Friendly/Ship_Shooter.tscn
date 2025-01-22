@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://b46b22hmdybm5"]
 
 [ext_resource type="Texture2D" uid="uid://dlq7p4y53m2qq" path="res://Media/Sprites/Game/Ship_Shooter.png" id="1_5n27n"]
-[ext_resource type="PackedScene" uid="uid://dn64m8e04tnoy" path="res://Scenes/Abstract/Game/AbstractFriendlyShip.tscn" id="2_5dn5m"]
+[ext_resource type="PackedScene" uid="uid://dn64m8e04tnoy" path="res://Scenes/AbstractScenes/Game/AbstractFriendlyShip.tscn" id="2_5dn5m"]
 
 [node name="Shooter" type="Sprite2D"]
 texture = ExtResource("1_5n27n")

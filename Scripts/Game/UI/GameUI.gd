@@ -75,34 +75,3 @@ func Helper_FormatNumber(value: int) -> String:
 	return result
 
 #endregion
-	
-	
-	
-	
-	
-	
-# TESTING STUFF BELOW!!! DELETE THESE LATER
-
-func _ready() -> void:
-	await get_tree().create_timer(1.5).timeout
-	Game.currentGold = UpdateCurrency(1000000, goldValueText, Game.currentGold, goldBar, Game.maxGold)
-	Game.currentSugar = UpdateCurrency(500000, sugarValueText, Game.currentSugar, sugarBar, Game.maxSugar)
-	Game.pearls = UpdateCurrency(1984, pearlValueText, Game.pearls)
-
-
-func changing() -> void:
-	if(int($"Test Stuff/mode".text) == 1):
-		Game.currentGold = UpdateCurrency(int($"Test Stuff/amount".text), goldValueText, Game.currentGold, goldBar, Game.maxGold)
-	elif(int($"Test Stuff/mode".text) == 2):
-		Game.currentSugar = UpdateCurrency(int($"Test Stuff/amount".text), sugarValueText, Game.currentSugar, sugarBar, Game.maxSugar)
-	elif(int($"Test Stuff/mode".text) == 3):
-		Game.pearls = UpdateCurrency(int($"Test Stuff/amount".text), pearlValueText, Game.pearls)
-	
-
-func setting() -> void:
-	if(int($"Test Stuff/mode".text) == 1):
-		Game.currentGold = UpdateCurrency(int($"Test Stuff/amount".text), goldValueText, Game.currentGold, goldBar, Game.maxGold, false)
-	elif(int($"Test Stuff/mode".text) == 2):
-		Game.currentSugar = UpdateCurrency(int($"Test Stuff/amount".text), sugarValueText, Game.currentSugar, sugarBar, Game.maxSugar, false)
-	elif(int($"Test Stuff/mode".text) == 3):
-		Game.pearls = UpdateCurrency(int($"Test Stuff/amount".text), pearlValueText, Game.pearls, null, -1, false)

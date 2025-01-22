@@ -1,0 +1,3 @@
+if you're not sure where to put something (could be anything), put it in this folder and
+notify Andy (@rmfandyplayz). if the path of the item matters for i.e. a script and you
+don't know where to put it, notify Andy ASAP and he will tell you where to put it.

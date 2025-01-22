@@ -6,7 +6,7 @@
 [ext_resource type="FontFile" uid="uid://bt1r3wvjig214" path="res://Media/Fonts/SFPro/SF-Pro-Display-BoldItalic.otf" id="3_ttebp"]
 [ext_resource type="FontFile" uid="uid://bnfenwy05u2ed" path="res://Media/Fonts/SFPro/SF-Pro-Display-Bold.otf" id="4_mdvb3"]
 [ext_resource type="Texture2D" uid="uid://dqlwgavjftp3k" path="res://Media/UserInterface/MainMenu/Button_Battle.png" id="6_h0f5v"]
-[ext_resource type="Script" path="res://Scripts/MainMenu/PlayButton.gd" id="6_pb4tg"]
+[ext_resource type="Script" path="res://Scripts/MainMenu/UIElements/PlayButton.gd" id="6_pb4tg"]
 [ext_resource type="Texture2D" uid="uid://dgvro20ttq6g" path="res://Media/UserInterface/MainMenu/Button_Settings.png" id="8_2n5lo"]
 
 [node name="MainMenu" type="Node2D"]

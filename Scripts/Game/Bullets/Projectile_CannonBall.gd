@@ -10,7 +10,7 @@ class_name Cannon_ball
 var elapsed_time : float = 0
 var total_distance : float
 var control_pos : Vector2
-
+var firedFrom : BaseCannonWeapon # used to determine the stats such as damage
 var launched_pos : Vector2
 var target_pos : Vector2
 

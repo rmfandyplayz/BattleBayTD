@@ -20,4 +20,8 @@ func _ready() -> void:
 
 
 func FireWeapon(targetPos : Vector2):
-	pass
+	var projectile : Cannon_ball = cannonBall.instantiate()
+	get_tree().root.add_child.call_deferred(projectile)
+	projectile.launched_pos = global_position
+	projectile.target_pos = targetPos
+	projectile.firedFrom = self # the bullets looks here for damage info

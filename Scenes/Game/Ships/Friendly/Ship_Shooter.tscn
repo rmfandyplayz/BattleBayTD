@@ -1,9 +1,35 @@
-[gd_scene load_steps=3 format=3 uid="uid://b46b22hmdybm5"]
+[gd_scene load_steps=8 format=3 uid="uid://b46b22hmdybm5"]
 
 [ext_resource type="Texture2D" uid="uid://dlq7p4y53m2qq" path="res://Media/Sprites/Game/Ship_Shooter.png" id="1_5n27n"]
 [ext_resource type="PackedScene" uid="uid://dn64m8e04tnoy" path="res://Scenes/AbstractScenes/Game/AbstractFriendlyShip.tscn" id="2_5dn5m"]
+[ext_resource type="PackedScene" uid="uid://b0dshgrehq1u6" path="res://Scenes/Game/Bullets/Projectile_CannonBall.tscn" id="3_6ooob"]
+[ext_resource type="Texture2D" uid="uid://do4onemxtmwfr" path="res://Media/Unsorted/icon.svg" id="4_nd00o"]
+[ext_resource type="PackedScene" uid="uid://43cvtyusp58a" path="res://Scenes/Game/Weapons/Cannon_StandardCannon.tscn" id="4_t6o4c"]
+[ext_resource type="Script" path="res://Scripts/AbstractScripts/Ships/Collision.gd" id="5_ww5np"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_citxm"]
+size = Vector2(267, 281)
 
 [node name="Shooter" type="Sprite2D"]
+position = Vector2(780, 566)
 texture = ExtResource("1_5n27n")
 
-[node name="AbstractFriendlyShip" parent="." instance=ExtResource("2_5dn5m")]
+[node name="AbstractFriendlyShip" parent="." node_paths=PackedStringArray("cannonWeapon") instance=ExtResource("2_5dn5m")]
+cannonBall = ExtResource("3_6ooob")
+cannonWeapon = NodePath("Cannon_StandardCannon")
+
+[node name="Cannon_StandardCannon" parent="AbstractFriendlyShip" instance=ExtResource("4_t6o4c")]
+
+[node name="BeingSelectedIndicator" type="Sprite2D" parent="."]
+visible = false
+texture = ExtResource("4_nd00o")
+
+[node name="HitDetector" type="Area2D" parent="."]
+script = ExtResource("5_ww5np")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HitDetector"]
+position = Vector2(-2.5, 15.5)
+shape = SubResource("RectangleShape2D_citxm")
+
+[connection signal="mouse_entered" from="HitDetector" to="HitDetector" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="HitDetector" to="HitDetector" method="_on_mouse_exited"]

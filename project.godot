@@ -17,6 +17,10 @@ config/features=PackedStringArray("4.3", "Mobile")
 boot_splash/bg_color=Color(0, 0, 0, 1)
 config/icon="res://Media/Unsorted/icon.svg"
 
+[autoload]
+
+InputSharedProcessor="*res://Scripts/AbstractScripts/Ships/SharedInputProcessor.gd"
+
 [display]
 
 window/size/viewport_width=1920

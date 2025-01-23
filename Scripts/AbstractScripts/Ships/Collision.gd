@@ -5,14 +5,21 @@ class_name BaseMouseClickAreaDetector
 ## would be funny if this detects cannon bullets too instead of the other way around
 ## just saying
 
-var _mouse_is_inside : bool = false
+var CanBeSelected : bool = false
 
 func _on_mouse_entered() -> void:
-	_mouse_is_inside = true
+	CanBeSelected = true
 
 func _on_mouse_exited() -> void:
-	_mouse_is_inside = false
+	CanBeSelected = false
+
+func _ready() -> void:
+	InputSharedProcessor.AttachSelf(self)
 
 func _input(event: InputEvent) -> void:
-	if event.is_action_pressed("leftClick") and _mouse_is_inside :
-		$"../AbstractFriendlyShip".mouseSelected()
+	if not event.is_action_pressed("leftClick") :
+		return
+	if CanBeSelected :
+		$"../AbstractFriendlyShip".MouseSelected()
+	else :
+		$"../AbstractFriendlyShip".ConsiderShooting()

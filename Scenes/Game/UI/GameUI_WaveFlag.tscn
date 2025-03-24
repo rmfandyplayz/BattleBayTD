@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://b47dxf611674l"]
 
-[ext_resource type="Script" path="res://Scripts/Game/UI/GameUI_WaveFlag.gd" id="1_al78c"]
+[ext_resource type="Script" uid="uid://dd315ts1qmwfd" path="res://Scripts/Game/UI/GameUI_WaveFlag.gd" id="1_al78c"]
 [ext_resource type="Texture2D" uid="uid://ct5oplwh2jf6k" path="res://Media/UserInterface/Game/Icon_FlagGreen.png" id="2_0fp6o"]
 [ext_resource type="Texture2D" uid="uid://dxgr1uhv2or2n" path="res://Media/UserInterface/Game/Icon_FlagRed.png" id="3_x7b4o"]
 

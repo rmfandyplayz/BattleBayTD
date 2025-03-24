@@ -1,6 +1,6 @@
 [gd_scene load_steps=13 format=3 uid="uid://c88m6gbph25g3"]
 
-[ext_resource type="Script" path="res://Scripts/Game/UI/GameUI.gd" id="1_7c7vu"]
+[ext_resource type="Script" uid="uid://c51vvikr63hlq" path="res://Scripts/Game/UI/GameUI.gd" id="1_7c7vu"]
 [ext_resource type="Texture2D" uid="uid://dw55ns05vvphx" path="res://Media/UserInterface/Game/Icon_Sugar.png" id="1_tu8nx"]
 [ext_resource type="Texture2D" uid="uid://cq4o2kl821c8x" path="res://Media/UserInterface/Game/Icon_Gold.png" id="2_61to4"]
 [ext_resource type="Texture2D" uid="uid://bvkancp7567ao" path="res://Media/UserInterface/General/Bar_Empty.png" id="3_do0y2"]
